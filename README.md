@@ -37,7 +37,7 @@ Tais padrões são necessários pois o algoritimo espera a posição definida co
 ### Pipeline de Processamento
 
 O primeiro processo na no processamento do banco de imagens é o de detectar a face do cubo na imagem. Para isso, é feita uma segmentação com threshold e é utilizada uma função de detectar bordas do OpenCV para encontrar as coordenadas da borda do cubo. A partir das coordenadas de cada face, é possível saber a posição de cada um dos 9 quadradinhos dela, e com essa posição, resta saber a cor de cada um.
-Para isso, foi definida para cada uma das 9 cores um filtro HSV. Os valores de cada filtro foram definidos e testados manualmente utilizando uma ferramenta desenvolvida com esse propósito: trackbars.py.
+Para isso, foi definida para cada uma das 9 cores um filtro HSV. Os valores de cada filtro foram definidos e testados manualmente utilizando uma ferramenta desenvolvida com esse propósito: [trackbars.py](/trackbars.py)
 Sabendo a posição e a cor de cada quadradinho, podemos transformar cada face do cubo em um array, e aplicá-las no algoritimo de resolução [Two Phase Algorithm](http://kociemba.org/cube.htm), que soluciona o cubo com 20 movimentos em média.
 
 ## Resultados Finais
